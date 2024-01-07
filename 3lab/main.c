@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #define FRAME_SIZE 256
-#define NUM_FRAMES 128
+#define NUM_FRAMES 256
 #define TLB_SIZE 16
 #define PAGE_TABLE_SIZE 256
 
@@ -118,6 +118,7 @@ int main()
     {
         int physicalAddress = translateAddress(virtualAddress);
         char value = physicalMemory[physicalAddress / FRAME_SIZE][physicalAddress % FRAME_SIZE] & 0xFF;
+
         fprintf(outputFile, "Virtual address: %d Physical address: %d Value: %d\n",
                 virtualAddress, physicalAddress, value);
         total++;

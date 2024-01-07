@@ -2,7 +2,7 @@
 #
 
 CC=gcc
-CFLAGS=-Wall
+CFLAGS=
 PTHREADS=-lpthread
 
 all: client.o threadpool.o

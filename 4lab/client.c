@@ -62,23 +62,23 @@ int main(void)
 
     // submit the work to the queue
     pool_submit(&add, &work);
-    // pool_submit(&sub, &work);
+    pool_submit(&sub, &work);
     // pool_submit(&mul, &work);
     // pool_submit(&div, &work);
 
 
     pool_submit(&add, &work1);
-    // pool_submit(&sub, &work1);
+    pool_submit(&sub, &work1);
     // pool_submit(&mul, &work1);
     // pool_submit(&div, &work1);
 
     // pool_submit(&add, &work2);
-    // pool_submit(&sub, &work2);
+    pool_submit(&sub, &work2);
     // pool_submit(&mul, &work2);
     // pool_submit(&div, &work2);
 
     pool_submit(&add, &work3);
-    // pool_submit(&sub, &work3);
+    pool_submit(&sub, &work3);
     // pool_submit(&mul, &work3);
     // pool_submit(&div, &work3);
     // // may be helpful
@@ -86,6 +86,5 @@ int main(void)
 
     // shutdown the thread pool
     pool_shutdown();
-    printf("%d\n", work.a);
     return 0;
 }
